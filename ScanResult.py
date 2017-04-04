@@ -1,5 +1,5 @@
 
-Unknown = 0
+Unknown = 0xfff # fff is used to have the correct behavior with & masks.
 Open = 0x1
 Closed = 0x2
 Filtered = 0x4
@@ -11,6 +11,7 @@ def to_str(value):
     if value & Open != 0: return "Open"
     if value & Closed != 0: return "Closed"
     if value & Filtered != 0: return "Filtered"
+    return "Error"
 
 def get_result_str(value):
     result_list = []
