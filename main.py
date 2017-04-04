@@ -18,6 +18,7 @@ def set_configs():
     return {
         'dest_ip'   : args.dest_ip,
         'dports'    : list(set(args.dports)),
+        'sport'     : RandShort(),
         'verbose'   : args.verbose,
         'timeout'   : args.timeout
     }
@@ -25,6 +26,10 @@ def set_configs():
 def main():
 
     config = set_configs()
+    if(!config['verbose'])
+        conf.verb = 0
+
+
 
 if __name__ == "__main__":
     main()
