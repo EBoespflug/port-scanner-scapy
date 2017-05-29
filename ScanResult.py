@@ -14,6 +14,7 @@ Filtered = 0x4
 Error = 0x800
 
 def to_str(value):
+    '''Return the string corresponding to the passed port-result flag.'''
     if value == Unknown: return "Unknown"
     if value & Error != 0: return "Error"
     if value & Open != 0: return "Open"
@@ -22,6 +23,7 @@ def to_str(value):
     return "Error"
 
 def get_result_str(value):
+    '''Returns the string corresponding to the specified port-result port.'''
     result_list = []
     # Create result list.
     if value == Unknown: return to_str(Unknown)

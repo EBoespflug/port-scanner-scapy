@@ -11,6 +11,7 @@ from scapy.all import *
 import ScanResult
 
 def TCP_SYN_scan(**args):
+    """Performs a TCP SYN scan for the specified destination port ('dport') and destination ip ('dest_ip'). The source port is random."""
     dport = args['dport']
     sport = RandShort()
     dest_ip = args['dest_ip']
@@ -36,6 +37,7 @@ def TCP_SYN_scan(**args):
     return ScanResult.Unknown
 
 def launch_scans(config):
+    """Launch a TCP SYN scan for each destination port ('dport') with the passed options."""
     port_results = []
     for port in config['dports']:
         port_results.append(TCP_SYN_scan(dport=port, dest_ip=config['dest_ip'], timeout=config['timeout']))
@@ -43,6 +45,7 @@ def launch_scans(config):
     return port_results
 
 def print_results(config, port_results):
+    '''Print the scan result.'''
     for i in range(len(port_results)):
         report_str = "port " + str(config['dports'][i])
         report_str += " : [" + ScanResult.get_result_str(port_results[i]) + "]."
