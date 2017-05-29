@@ -1,4 +1,12 @@
-#!/urs/bin/python
+# Etienne BOESPFLUG - 2017
+#
+# main.py - https://github.com/EBoespflug/port-scanner-scapy
+#
+# This project is part of the public domain.
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE.
+
 import argparse
 from scan import launch_scans, print_results
 from scapy.all import *

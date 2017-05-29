@@ -1,3 +1,11 @@
+# Etienne BOESPFLUG - 2017
+#
+# ScanResult.py - https://github.com/EBoespflug/port-scanner-scapy
+#
+# This project is part of the public domain.
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE.
 
 Unknown = 0xfff # fff is used to have the correct behavior with & masks.
 Open = 0x1
