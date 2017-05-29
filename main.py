@@ -1,14 +1,20 @@
-#!/urs/bin/python
+# Etienne BOESPFLUG - 2017
+#
+# main.py - https://github.com/EBoespflug/port-scanner-scapy
+#
+# This project is part of the public domain.
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE.
+
 import argparse
 from scan import launch_scans, print_results
 from scapy.all import *
 
-
 banner = "Simple port scanner v1.0"
 
-# This function uses argparse to parse command line
-# arguments passed to the script.
 def set_configs():
+    """This function uses argparse to parse command line arguments passed to the script."""
     arg_parser = argparse.ArgumentParser(description=banner)
 
     arg_parser.add_argument("dest_ip", help="Destination IP address.")
@@ -37,17 +43,14 @@ def set_configs():
     }
 
 def main():
-
     config = set_configs()
 
     if config is None :
         return
-
     if not config['verbose']:
         conf.verb = 0
 
     print_results(config, launch_scans(config))
-
 
 if __name__ == "__main__":
     main()
