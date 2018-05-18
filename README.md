@@ -5,7 +5,7 @@ This tool is a ***command-line port scanner using Scapy***.
 
 It proceed to a TCP-SYN scan for each specified port for the target ip.
 
-This program is an example of port scanning implementation using *Scapy*. For professional uses, please consider using existing tools such as [nmap](https://nmap.org/)).
+This program is an example of port scanning implementation using *Scapy*. For professional uses, please consider using existing tools such as [nmap](https://nmap.org/).
 
 ## Installation and Dependencies
 
